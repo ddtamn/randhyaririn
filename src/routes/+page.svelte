@@ -1,8 +1,6 @@
 <script>
 	import Closing from '../lib/Closing.svelte';
-import Galleries from '../lib/Galleries.svelte';
-  import Story from '../lib/Story.svelte';
-	import supabase  from '../lib/supabseClient';
+  import Galleries from '../lib/Galleries.svelte';
 	import Wallet from '../lib/Wallet.svelte';
 	import Wish from '../lib/Wish.svelte';
 	import { onMount } from 'svelte';
@@ -28,7 +26,6 @@ import Galleries from '../lib/Galleries.svelte';
   <Brides/>
   <Events/>
   <Map/>
-  <Story/>
   <Galleries/>
   <Wallet/>
   <Wish/>
