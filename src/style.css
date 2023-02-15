@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+}
+
+section {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+
+    background-image: url('https://dinvite.online/themes/elegant-brown-leaves/images/bg-v2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+    @keyframes -global-from-left {
+      0% {
+        transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
+        opacity: 1;
+      }
+  
+      100% {
+        transform: rotateX(0deg) translateX(0) skewX(0deg);
+        opacity: 1;
+      }
+    }
