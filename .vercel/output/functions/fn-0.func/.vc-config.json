@@ -1,0 +1,5 @@
+{
+	"runtime": "nodejs18.x",
+	"handler": "..\\DESIGN\\2023\\UNDANGAN RIRIN\\UNDANGAN ONLINE\\.svelte-kit\\vercel-tmp\\index.js",
+	"launcherType": "Nodejs"
+}
