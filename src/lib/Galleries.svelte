@@ -1,38 +1,43 @@
 <script>
+
 	import Ornamen from "./Ornamen.svelte";
   import '../flexbin.css'
-  import PhotoSwipeGallery from 'svelte-photoswipe'
+  // import PhotoSwipeGallery from 'svelte-photoswipe'
+  import PhotoSwipe from "./PhotoSwipe.svelte";
 
-  const images = [
-    {
-      src: "https://placebear.com/1920/1080",
-      height: 1080,
-      width: 1920,
-      alt: "Test",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      src: "https://placebear.com/600/400",
-      width: 600,
-      height: 400,
-      description: '<a href="https://google.com">Google</a>'
-    },
-    {
-      src: "https://placebear.com/400/400",
-      width: 4000,
-      height: 4000,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit2",
-      alt: "Random"
-    },
-  ]
+ const images = [
+            {
+              largeURL:
+                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
+              thumbnailURL:
+                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg',
+              width: 1875,
+              height: 2500,
+            },
+            {
+              largeURL:
+                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg',
+              thumbnailURL:
+                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg',
+              width: 1669,
+              height: 2500,
+            },
+            {
+              largeURL:
+                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg',
+              thumbnailURL:
+                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg',
+              width: 2500,
+              height: 1666,
+            },
+          ]
 
 </script>
 <section class="galleries">
   <Ornamen/>
   <div class="title">Our Gallery</div>
-  <div class="container">
-      <PhotoSwipeGallery {images} styling={"flex"} />
+  <div class="container" >
+       <PhotoSwipe galleryID="my-test-gallery" {images} />
   </div>
 </section>
 

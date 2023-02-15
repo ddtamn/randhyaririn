@@ -1,28 +1,26 @@
-import { c as create_ssr_component, v as validate_component, b as subscribe, e as escape, d as add_styles, f as add_attribute, h as each } from "../../chunks/index2.js";
-import "photoswipe/dist/photoswipe-lightbox.esm.js";
-import "photoswipe/dist/photoswipe.esm.js";
-import { w as writable } from "../../chunks/index.js";
+import { c as create_ssr_component, v as validate_component, d as add_attribute, f as each, e as escape } from "../../chunks/index.js";
+import "photoswipe/lightbox";
 import { createClient } from "@supabase/supabase-js";
 import moment from "moment";
 const Ornamen_svelte_svelte_type_style_lang = "";
-const css$c = {
+const css$b = {
   code: ".top-left.svelte-i6da0v{position:absolute;top:0;left:0;pointer-events:none}.top-right.svelte-i6da0v{position:absolute;top:0;right:0;pointer-events:none}.bottom-right.svelte-i6da0v{position:absolute;bottom:0;right:0;pointer-events:none}.bottom-left.svelte-i6da0v{position:absolute;bottom:0;left:0;pointer-events:none}",
   map: null
 };
 const Ornamen = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$c);
+  $$result.css.add(css$b);
   return `<div class="${"top-left svelte-i6da0v"}"><img src="${"https://dinvite.online/themes/elegant-brown-leaves/images/frame-tl-v2.png"}" alt="${""}" width="${"200px"}"></div>
     <div class="${"top-right svelte-i6da0v"}"><img src="${"https://dinvite.online/themes/elegant-brown-leaves/images/frame-tr-v2.png"}" alt="${""}" width="${"350px"}"></div>
     <div class="${"bottom-right svelte-i6da0v"}"><img src="${"https://dinvite.online/themes/elegant-brown-leaves/images/frame-br-v2.png"}" alt="${""}" width="${"200px"}"></div>
     <div class="${"bottom-left svelte-i6da0v"}"><img src="${"https://dinvite.online/themes/elegant-brown-leaves/images/frame-bl-v2.png"}" alt="${""}" width="${"350px"}"></div>`;
 });
 const Closing_svelte_svelte_type_style_lang = "";
-const css$b = {
+const css$a = {
   code: ".closing.svelte-1ceete7.svelte-1ceete7{min-height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:1rem}.title.svelte-1ceete7.svelte-1ceete7{font-family:'Alex Brush', cursive;font-size:2.5rem;font-weight:600;color:#dba400;margin-bottom:15rem}.date.svelte-1ceete7.svelte-1ceete7{font-weight:bold;font-size:smaller}.powered.svelte-1ceete7 p.svelte-1ceete7{font-style:italic}.powered.svelte-1ceete7 img.svelte-1ceete7{width:150px}",
   map: null
 };
 const Closing = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  $$result.css.add(css$b);
+  $$result.css.add(css$a);
   return `<section class="${"closing svelte-1ceete7"}">${validate_component(Ornamen, "Ornamen").$$render($$result, {}, {}, {})}
   <p class="${"text"}">Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do&#39;a restu kepada kedua mempelai.</p>
   <p class="${"date svelte-1ceete7"}">Kamis, 23 Februari 2023</p>
@@ -33,36 +31,17 @@ const Closing = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const flexbin = "";
 const photoswipe = "";
-const PhotoSwipeGallery_svelte_svelte_type_style_lang = "";
-const css$a = {
-  code: ".gallery.styling-flex.svelte-fjes6j.svelte-fjes6j.svelte-fjes6j{display:flex;flex-flow:row wrap;justify-content:space-evenly;align-items:center;gap:0.5rem}.gallery.styling-grid.svelte-fjes6j.svelte-fjes6j.svelte-fjes6j{display:grid;grid-template-columns:repeat(var(--grid-columns), minmax(0, 1fr));justify-items:center;align-items:center;gap:0.5rem}.gallery.svelte-fjes6j>a.svelte-fjes6j>img.svelte-fjes6j{vertical-align:bottom;max-width:100%;height:auto}",
-  map: null
-};
-const PhotoSwipeGallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$unsubscribe_options;
+const PhotoSwipe = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { galleryID } = $$props;
   let { images } = $$props;
-  let { individual = false } = $$props;
-  let { styling = "none" } = $$props;
-  let { gridColumns = 5 } = $$props;
-  let element;
-  const options = writable(void 0);
-  $$unsubscribe_options = subscribe(options, (value) => value);
+  if ($$props.galleryID === void 0 && $$bindings.galleryID && galleryID !== void 0)
+    $$bindings.galleryID(galleryID);
   if ($$props.images === void 0 && $$bindings.images && images !== void 0)
     $$bindings.images(images);
-  if ($$props.individual === void 0 && $$bindings.individual && individual !== void 0)
-    $$bindings.individual(individual);
-  if ($$props.styling === void 0 && $$bindings.styling && styling !== void 0)
-    $$bindings.styling(styling);
-  if ($$props.gridColumns === void 0 && $$bindings.gridColumns && gridColumns !== void 0)
-    $$bindings.gridColumns(gridColumns);
-  $$result.css.add(css$a);
-  $$unsubscribe_options();
-  return `<div class="${"gallery styling-" + escape(styling, true) + " svelte-fjes6j"}"${add_styles({ "--grid-columns": gridColumns })}${add_attribute("this", element, 0)}>${each(images, (img) => {
-    let thumb = img.thumbnail ?? img;
-    return `
-    <a${add_attribute("href", img.src, 0)}${add_attribute("data-pswp-width", img.width, 0)}${add_attribute("data-pswp-height", img.height, 0)} target="${"_blank"}" class="${"svelte-fjes6j"}"><img${add_attribute("src", thumb.src, 0)}${add_attribute("alt", img.alt ?? "", 0)}${add_attribute("width", thumb.width, 0)}${add_attribute("height", thumb.height, 0)} class="${"svelte-fjes6j"}"></a>`;
-  })}
-</div>`;
+  return `<div class="${"flexbin flexbin-margin"}"${add_attribute("id", galleryID, 0)}>${each(images, (image) => {
+    return `<a${add_attribute("href", image.largeURL, 0)}${add_attribute("data-pswp-width", image.width, 0)}${add_attribute("data-pswp-height", image.height, 0)} target="${"_blank"}" rel="${"noreferrer"}"><img${add_attribute("src", image.largeURL, 0)} alt="${""}">
+          </a>`;
+  })}</div>`;
 });
 const Galleries_svelte_svelte_type_style_lang = "";
 const css$9 = {
@@ -72,30 +51,28 @@ const css$9 = {
 const Galleries = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const images = [
     {
-      src: "https://placebear.com/1920/1080",
-      height: 1080,
-      width: 1920,
-      alt: "Test",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      largeURL: "https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg",
+      thumbnailURL: "https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg",
+      width: 1875,
+      height: 2500
     },
     {
-      src: "https://placebear.com/600/400",
-      width: 600,
-      height: 400,
-      description: '<a href="https://google.com">Google</a>'
+      largeURL: "https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg",
+      thumbnailURL: "https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg",
+      width: 1669,
+      height: 2500
     },
     {
-      src: "https://placebear.com/400/400",
-      width: 4e3,
-      height: 4e3,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit2",
-      alt: "Random"
+      largeURL: "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg",
+      thumbnailURL: "https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg",
+      width: 2500,
+      height: 1666
     }
   ];
   $$result.css.add(css$9);
   return `<section class="${"galleries svelte-l1d26r"}">${validate_component(Ornamen, "Ornamen").$$render($$result, {}, {}, {})}
   <div class="${"title svelte-l1d26r"}">Our Gallery</div>
-  <div class="${"container svelte-l1d26r"}">${validate_component(PhotoSwipeGallery, "PhotoSwipeGallery").$$render($$result, { images, styling: "flex" }, {}, {})}</div>
+  <div class="${"container svelte-l1d26r"}">${validate_component(PhotoSwipe, "PhotoSwipe").$$render($$result, { galleryID: "my-test-gallery", images }, {}, {})}</div>
 </section>`;
 });
 const Story_svelte_svelte_type_style_lang = "";

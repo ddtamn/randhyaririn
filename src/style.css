@@ -24,14 +24,15 @@ section {
     background-size: cover;
   }
 
-    @keyframes -global-from-left {
-      0% {
-        transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
-        opacity: 1;
-      }
-  
-      100% {
-        transform: rotateX(0deg) translateX(0) skewX(0deg);
-        opacity: 1;
-      }
-    }
+        .pswp__scroll-wrap,
+        .pswp__bg,
+        .pswp__container,
+        .pswp__item,
+        .pswp__content,
+        .pswp__img,
+        .pswp__zoom-wrap {
+          max-width: none;
+          background: rgba(0, 0, 0, 0.479);
+        }
+
+
