@@ -8,28 +8,61 @@
  const images = [
             {
               largeURL:
-                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
+                'https://dinvite.online/themes/assets/demo/preview12/4.jpg',
               thumbnailURL:
-                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg',
-              width: 1875,
-              height: 2500,
+                'https://dinvite.online/themes/assets/demo/preview12/4.jpg',
+              width: 1080,
+              height: 1350,
             },
             {
               largeURL:
-                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg',
+                'https://dinvite.online/themes/assets/demo/preview12/5.jpg',
               thumbnailURL:
-                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg',
-              width: 1669,
-              height: 2500,
+                'https://dinvite.online/themes/assets/demo/preview12/5.jpg',
+              width: 1080,
+              height: 1350,
             },
             {
               largeURL:
-                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg',
+                'https://dinvite.online/themes/assets/demo/preview12/6.jpg',
               thumbnailURL:
-                'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg',
-              width: 2500,
-              height: 1666,
+                'https://dinvite.online/themes/assets/demo/preview12/6.jpg',
+              width: 1080,
+              height: 1349,
             },
+            {
+              largeURL:
+                'https://dinvite.online/themes/assets/demo/preview12/1.jpg',
+              thumbnailURL:
+                'https://dinvite.online/themes/assets/demo/preview12/1.jpg',
+              width: 1080,
+              height: 1350,
+            },
+            {
+              largeURL:
+                'https://dinvite.online/themes/assets/demo/preview12/8.jpg',
+              thumbnailURL:
+                'https://dinvite.online/themes/assets/demo/preview12/8.jpg',
+              width: 1080,
+              height: 1350,
+            },
+            {
+              largeURL:
+                'https://dinvite.online/themes/assets/demo/preview12/3.jpg',
+              thumbnailURL:
+                'https://dinvite.online/themes/assets/demo/preview12/3.jpg',
+              width: 1080,
+              height: 1350,
+            },
+            {
+              largeURL:
+                'https://dinvite.online/themes/assets/demo/preview12/2.jpg',
+              thumbnailURL:
+                'https://dinvite.online/themes/assets/demo/preview12/2.jpg',
+              width: 1080,
+              height: 1500,
+            },
+            
           ]
 
 </script>

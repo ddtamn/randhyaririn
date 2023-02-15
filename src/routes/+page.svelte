@@ -11,7 +11,7 @@ import Galleries from '$lib/Galleries.svelte';
 	import Events from '../lib/Events.svelte';
 	import Map from '../lib/Map.svelte';
 	import Opening from '../lib/Opening.svelte';
-	import Ornamen from '../lib/Ornamen.svelte';
+	// import Ornamen from '../lib/Ornamen.svelte';
   import '../style.css'
 
 
@@ -28,7 +28,7 @@ import Galleries from '$lib/Galleries.svelte';
   <Brides/>
   <Events/>
   <Map/>
-  <Story/>
+  <!-- <Story/> -->
   <Galleries/>
   <Wallet/>
   <Wish/>
