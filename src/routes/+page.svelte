@@ -1,10 +1,10 @@
 <script>
-	import Closing from '$lib/Closing.svelte';
-import Galleries from '$lib/Galleries.svelte';
-  import Story from '$lib/Story.svelte';
-	import supabase  from '$lib/supabseClient';
-	import Wallet from '$lib/Wallet.svelte';
-	import Wish from '$lib/Wish.svelte';
+	import Closing from '../lib/Closing.svelte';
+import Galleries from '../lib/Galleries.svelte';
+  import Story from '../lib/Story.svelte';
+	import supabase  from '../lib/supabseClient';
+	import Wallet from '../lib/Wallet.svelte';
+	import Wish from '../lib/Wish.svelte';
 	import { onMount } from 'svelte';
   import Brides from '../lib/Brides.svelte';
   import Cover from '../lib/Cover.svelte';
@@ -28,7 +28,7 @@ import Galleries from '$lib/Galleries.svelte';
   <Brides/>
   <Events/>
   <Map/>
-  <!-- <Story/> -->
+  <Story/>
   <Galleries/>
   <Wallet/>
   <Wish/>
