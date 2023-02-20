@@ -1,50 +1,70 @@
 <script>
 	import Closing from '../lib/Closing.svelte';
-  import Galleries from '../lib/Galleries.svelte';
+	import Galleries from '../lib/Galleries.svelte';
 	import Wallet from '../lib/Wallet.svelte';
 	import Wish from '../lib/Wish.svelte';
 	import { onMount } from 'svelte';
-  import Brides from '../lib/Brides.svelte';
-  import Cover from '../lib/Cover.svelte';
+	import Brides from '../lib/Brides.svelte';
+	import Cover from '../lib/Cover.svelte';
 	import Events from '../lib/Events.svelte';
 	import Map from '../lib/Map.svelte';
 	import Opening from '../lib/Opening.svelte';
 	// import Ornamen from '../lib/Ornamen.svelte';
-  import '../style.css'
+	import '../style.css';
+	import Preloader from '$lib/Preloader.svelte';
 
+	let loading = true;
 
- 
-
+	onMount(() => {
+		loading = false;
+	});
 </script>
 
 <main>
-  <Cover/>
-  <Opening/>
-  <section class="quotes">
-    <p>Every love story is beautiful, but ours is the best one. I loved her since the first time I saw her. My mother told me to pick the very best one, and I did. True love stories never have endings.</p>
-  </section>
-  <Brides/>
-  <Events/>
-  <Map/>
-  <Galleries/>
-  <Wallet/>
-  <Wish/>
-  <Closing/>
+	{#if loading}
+		<div class="loader">
+			<Preloader />
+		</div>
+	{/if}
+	<Cover />
+	<Opening />
+	<section class="quotes">
+		<p>
+			Every love story is beautiful, but ours is the best one. I loved her since the first time I
+			saw her. My mother told me to pick the very best one, and I did. True love stories never have
+			endings.
+		</p>
+	</section>
+	<Brides />
+	<Events />
+	<Map />
+	<Galleries />
+	<Wallet />
+	<Wish />
+	<Closing />
 </main>
 
-
 <style>
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 
-  .quotes {
-    text-align: center;
-  }
+	.quotes {
+		text-align: center;
+	}
 
-  
-
+	.loader {
+		position: fixed;
+		z-index: 99999;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: #f1f2f3;
+		display: grid;
+		place-items: center;
+	}
 </style>

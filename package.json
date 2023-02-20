@@ -29,6 +29,7 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^2.7.1",
 		"moment": "^2.29.4",
-		"photoswipe": "^5.3.5"
+		"photoswipe": "^5.3.5",
+		"svelte-icons-pack": "^2.0.0"
 	}
 }

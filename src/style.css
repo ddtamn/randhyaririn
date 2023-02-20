@@ -2,37 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Crimson Text', serif;
+	font-family: 'Crimson Text', serif;
 }
 
 section {
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    padding: 1.5rem;
-    text-align: center;
+	width: 100%;
+	max-width: 500px;
+	position: relative;
+	padding: 1.5rem;
+	text-align: center;
 
-    background-image: url('https://dinvite.online/themes/elegant-brown-leaves/images/bg-v2.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+	background-image: url('/assets/bg.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-        .pswp__scroll-wrap,
-        .pswp__bg,
-        .pswp__container,
-        .pswp__item,
-        .pswp__content,
-        .pswp__img,
-        .pswp__zoom-wrap {
-          max-width: none;
-          background: rgba(0, 0, 0, 0.479);
-        }
-
-
+.pswp__scroll-wrap,
+.pswp__bg,
+.pswp__container,
+.pswp__item,
+.pswp__content,
+.pswp__img,
+.pswp__zoom-wrap {
+	max-width: none;
+	background: rgba(0, 0, 0, 0.479);
+}
