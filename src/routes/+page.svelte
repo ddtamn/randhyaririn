@@ -20,6 +20,35 @@
 	});
 </script>
 
+<svelte:head>
+	<!-- Primary Meta Tags -->
+	<title>Randhya & Ririn | DINVITE</title>
+	<meta name="title" content="Randhya & Ririn | DINVITE" />
+	<meta
+		name="description"
+		content="The Wedding of Randhya & Ririn - Kamis, 23 Februari 2023 at Hotel Estrella & Conference Luwuk Banggai | dinvite.online"
+	/>
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="/images/COVER.JPG" />
+	<meta property="og:title" content="Randhya & Ririn | DINVITE" />
+	<meta
+		property="og:description"
+		content="The Wedding of Randhya & Ririn - Kamis, 23 Februari 2023 at Hotel Estrella & Conference Luwuk Banggai | dinvite.online"
+	/>
+	<meta property="og:image" content="/images/COVER.JPG" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="/images/COVER.JPG" />
+	<meta property="twitter:title" content="Randhya & Ririn | DINVITE" />
+	<meta
+		property="twitter:description"
+		content="The Wedding of Randhya & Ririn - Kamis, 23 Februari 2023 at Hotel Estrella & Conference Luwuk Banggai | dinvite.online"
+	/>
+	<meta property="twitter:image" content="/images/COVER.JPG" />
+</svelte:head>
 <main>
 	{#if loading}
 		<div class="loader">
