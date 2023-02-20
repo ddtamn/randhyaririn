@@ -7,7 +7,7 @@
 	<p>The Wedding of</p>
 	<p class="title">Randhya & Ririn</p>
 	<p class="date">Kamis, 23 Februari 2023</p>
-	<div class="frame" />
+	<div class="frame" style="background-image: url('images/OPENING.jpg');" />
 </section>
 
 <style>
@@ -27,7 +27,7 @@
 		width: 80%;
 		border-top-left-radius: 250px;
 		border-top-right-radius: 250px;
-		background-image: url('images/KTN01050.jpg');
+		/* background-image: url('images/KTN01050.jpg'); */
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
