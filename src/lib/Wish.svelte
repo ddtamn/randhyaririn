@@ -95,7 +95,20 @@
       <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A eaque voluptate dolorum officiis non amet incidunt sed eos distinctio atque fugit tempora officia, aut id itaque aperiam laborum adipisci voluptates.</p>
       <p class="date">15 Februrari 2022, 02:18</p>
     </div> -->
-
+		<div class="comment">
+			<div class="name">dinvite.online <span style="color: skyblue;">&check;</span></div>
+			<p class="text">
+				Selamat yah buat <span style="color: #dba400;">Randhya & Ririn</span>, semoga menjadi
+				keluarga yang sakinah, mawadah & warahmah, terima kasih juga sudah order undangan online di
+				<a
+					target="_blank"
+					rel="noreferrer"
+					style="color: skyblue;"
+					href="https://instagram.com/dinvite.online">dinvite.online</a
+				>
+			</p>
+			<p class="date">{relativeTime(new Date().getTime())}</p>
+		</div>
 		{#each comments as comment}
 			<div class="comment">
 				<div class="name">{comment.name}</div>
