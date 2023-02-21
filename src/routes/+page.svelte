@@ -55,8 +55,13 @@
 		}
 	}
 
+	let accessCount = 'satu';
+
 	async function checkGuest() {
 		let params = $page.url.searchParams.get('to');
+		if (params == 'karyawan & staff bni') {
+			accessCount = 'dua';
+		}
 		try {
 			if (params !== null && params !== undefined) {
 				let { data, error } = await supabase
@@ -186,7 +191,7 @@
 					<img src={qrCodesrc} alt="" />
 				</div>
 				<p>SCAN QR CODE DI ATAS SEBAGAI AKSES MASUK GEDUNG</p>
-				<i>Kartu akses ini berlaku untuk satu orang</i>
+				<i>Kartu akses ini berlaku untuk {accessCount} orang</i>
 				<button on:click={downloadQrCode}>DOWNLOAD KARTU AKSES</button>
 				<canvas bind:this={canvas} style="display: none;" />
 			</div>
