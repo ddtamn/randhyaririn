@@ -45,7 +45,7 @@
 	<p class="title">Randhya & Ririn</p>
 	<img class="cover-img" src="gallery/KTN07436.jpg" alt="cover" />
 	<p class="dear">Kepada Yth. <br /> Bapak/Ibu/Saudara/i:</p>
-	<p class="guest-name">{guestName || 'Nama Tamu'}</p>
+	<p class="guest-name">{guestName || ''}</p>
 	<button class="open-cover" on:click={openCover}>Buka Undangan</button>
 </section>
 <audio id="audio">

@@ -58,19 +58,25 @@
 	async function checkGuest() {
 		let params = $page.url.searchParams.get('to');
 		try {
-			let { data, error } = await supabase
-				.from('guestsbook')
-				.select('*')
-				.eq('name', params?.toUpperCase());
-
-			if (data?.length !== 0) {
-				setTimeout(() => {
-					showQrCode = true;
-				}, 8000);
-				showIcon = true;
-				// @ts-ignore
-				qrCodesrc = await generateQrCode(data[0].guest_code);
+			if (params !== null && params !== undefined) {
+				let { data, error } = await supabase
+					.from('guestsbook')
+					.select('*')
+					.eq('name', params?.toUpperCase());
+				if (data?.length !== 0) {
+					setTimeout(() => {
+						showQrCode = true;
+					}, 8000);
+					showIcon = true;
+					// @ts-ignore
+					qrCodesrc = await generateQrCode(data[0].guest_code);
+				}
 			}
+			setTimeout(() => {
+				showQrCode = true;
+			}, 8000);
+			showIcon = true;
+			qrCodesrc = await generateQrCode('rr230323fromonline');
 		} catch (error) {
 			console.log(error);
 			showQrCode = false;
@@ -80,6 +86,7 @@
 
 	const downloadQrCode = () => {
 		if (showQrCode) {
+			loading = true;
 			ctx = canvas.getContext('2d');
 			canvas.width = 1181;
 			canvas.height = 1772;
@@ -102,6 +109,7 @@
 						qrImage.height
 					);
 					download(canvas.toDataURL('image/jpeg', 0.8));
+					loading = false;
 				};
 			};
 		}
