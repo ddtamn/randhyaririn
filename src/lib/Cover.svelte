@@ -4,6 +4,9 @@
 	import FaSolidPlay from 'svelte-icons-pack/fa/FaSolidPlay';
 	import FaSolidPause from 'svelte-icons-pack/fa/FaSolidPause';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+
+	let guestName = $page.url.searchParams.get('to')?.toUpperCase();
 
 	let open = false;
 	let play = false;
@@ -40,9 +43,9 @@
 	<Ornamen />
 	<p>The Wedding of</p>
 	<p class="title">Randhya & Ririn</p>
-	<img class="cover-img" src="images/COVER.jpg" alt="cover" />
+	<img class="cover-img" src="gallery/KTN07436.jpg" alt="cover" />
 	<p class="dear">Kepada Yth. <br /> Bapak/Ibu/Saudara/i:</p>
-	<p class="guest-name">Nama Tamu</p>
+	<p class="guest-name">{guestName || 'Nama Tamu'}</p>
 	<button class="open-cover" on:click={openCover}>Buka Undangan</button>
 </section>
 <audio id="audio">
@@ -64,7 +67,7 @@
 <style>
 	.audio {
 		position: fixed;
-		z-index: 9999;
+		z-index: 9990;
 		bottom: 1rem;
 		right: 1rem;
 	}
